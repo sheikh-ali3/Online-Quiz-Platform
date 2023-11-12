@@ -12,16 +12,42 @@ using namespace std;
 class quiz
 {
 public:
+	bool check(string u)
+	{
+		int counter = 0;
+
+		ifstream file;
+		file.open(u + ".txt");
+		while (file.eof())
+		{
+			counter++;
+		}
+		
+		if (counter == 0)
+			return true;
+		else
+			return false;
+	}
+
 	void signup()
 	{
 		string fname, lname, user, pass, pass2;
 
-		cout << "|\t\t first name : ";
+		cout << "\t\t first name : ";
 		cin >> fname;
-		cout << "|\t\t last name : ";
+		cout << "\t\t  last name : ";
 		cin >> lname;
-		cout << "|\t\t username : ";
+		cout << "\t\t   username : ";
 		cin >> user;
+
+		ofstream file;
+		file.open(user + ".txt");
+
+		if (file.is_open())
+		{
+			cout << "\t\t   password : ";
+			cin >> pass;
+		}
 	}
 
 	void login()
