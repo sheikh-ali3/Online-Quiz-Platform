@@ -57,6 +57,7 @@ int main()
 	}
 	cout << endl;
 
+	here:
 	cout << "|\t\t  press N for new user  \t\t|\n";
 	cout << "|\t\t   press L for login    \t\t|\n";
 	cout << "|\t\t    press E to exit \t\t\t|\n"; 
@@ -89,10 +90,30 @@ int main()
 		{
 			q.signup();
 		}
+		else if (ch == 'g' or ch == 'G')
+		{
+
+		}
+		else if (ch == 'b' or ch == 'B')
+		{
+			goto here;
+		}
 	}
 	else if (choice == 'l' or choice == 'L')
 	{
-SR
+		string user, pass;
+
+		cout << "|\t\t username : ";
+		getline(cin, user);
+
+		ifstream f;
+		f.open(user + ".txt");
+
+		if (f.is_open())
+		{
+			cout << "|\t\t password : ";
+			getline(cin, pass);
+		}
 	}
 }
 
