@@ -40,13 +40,20 @@ public:
 		cout << "\t\t   username : ";
 		cin >> user;
 
-		ofstream file;
-		file.open(user + ".txt");
-
-		if (file.is_open())
+		if (check(user))
 		{
-			cout << "\t\t   password : ";
-			cin >> pass;
+			cout << "\t\t user already exits\n";
+		}
+		else
+		{
+			ofstream file;
+			file.open(user + ".txt");
+
+			if (file.is_open())
+			{
+				cout << "\t\t   password : ";
+				cin >> pass;
+			}
 		}
 	}
 
