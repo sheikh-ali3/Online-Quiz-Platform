@@ -16,7 +16,10 @@ public:
 	{
 		string fname, lname, pass, pass2;
 
-
+		cout << "|\t\t first name : ";
+		cin >> fname;
+		cout << "|\t\t last name : ";
+		cin >> lname;
 	}
 
 	void login()
