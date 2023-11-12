@@ -14,12 +14,14 @@ class quiz
 public:
 	void signup()
 	{
-		string fname, lname, pass, pass2;
+		string fname, lname, user, pass, pass2;
 
 		cout << "|\t\t first name : ";
 		cin >> fname;
 		cout << "|\t\t last name : ";
 		cin >> lname;
+		cout << "|\t\t username : ";
+		cin >> user;
 	}
 
 	void login()
