@@ -96,6 +96,7 @@ int main()
 		}
 		else if (ch == 'b' or ch == 'B')
 		{
+			system("cls");
 			goto here;
 		}
 	}
