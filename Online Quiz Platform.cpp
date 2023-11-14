@@ -54,7 +54,10 @@ public:
 
 				if (pass == pass2)
 				{
-					file<<
+					file << user << endl;
+					file << pass << endl;
+					file << fname << endl;
+					file << lname << endl;
 				}
 			}
 		}
