@@ -18,12 +18,8 @@ public:
 
 		ifstream file;
 		file.open(u + ".txt");
-		while (file.eof())
-		{
-			counter++;
-		}
 		
-		if (counter == 0)
+		if (file.eof())
 			return true;
 		else
 			return false;
@@ -53,6 +49,13 @@ public:
 			{
 				cout << "\t\t   password : ";
 				cin >> pass;
+				cout << "\t\tconfirm password : ";
+				cin >> pass2;
+
+				if (pass == pass2)
+				{
+					file<<
+				}
 			}
 		}
 	}
