@@ -16,6 +16,12 @@ public:
 	{
 		char choice;
 
+		for (int i = 0; i < 57; i++)
+		{
+			cout << "-";
+		}
+		cout << endl;
+
 		cout << "|\t\t  press N for new user  \t\t|\n";
 		cout << "|\t\t   press L for login    \t\t|\n";
 		cout << "|\t\t    press E to exit \t\t\t|\n";
@@ -118,6 +124,8 @@ public:
 					file << lname << endl;
 
 					cout << "\n\t\taccount added successfully\n";
+					system("cls");
+					main_menu();
 				}
 				else
 				{
@@ -130,7 +138,9 @@ public:
 
 	void login()
 	{
-		string user, pass, st[4], line;
+		string user, pass, line;
+		vector<string> st;
+
 		cout << "\t username : ";
 		cin >> user;
 
@@ -138,20 +148,23 @@ public:
 		file.open(user+".txt");
 		if (file.is_open())
 		{
+			here:
 			cout << "\t password : ";
 			cin >> pass;
 
 			int i = 0;
-			while (file.eof())
+			while (!file.eof())
 			{
 				getline(file, line);
-				st[i] = line;
-				i++;
+				st.push_back(line);
 			}
 
 			if (pass == st[1])
-			{
 				cout << "\tWelcome " << st[2] << " " << st[3] << endl;
+			else
+			{
+				cout << "\twrong password ..... retry!!\n"; 
+				goto here;
 			}
 		}
 		else
