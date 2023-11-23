@@ -12,6 +12,62 @@ using namespace std;
 class quiz
 {
 public:
+	void main_menu()
+	{
+		char choice;
+
+		cout << "|\t\t  press N for new user  \t\t|\n";
+		cout << "|\t\t   press L for login    \t\t|\n";
+		cout << "|\t\t    press E to exit \t\t\t|\n";
+
+		for (int i = 0; i < 57; i++)
+		{
+			cout << "-";
+		}
+		cout << endl;
+		
+		choice = _getch();
+
+		if (choice == 'N' or choice == 'n')
+			user_menu();
+		else if (choice == 'l' or choice == 'L')
+			login();
+		else if (choice == 'e' or choice == 'E')
+			cout << "thank you for your visit\n";
+
+	}
+
+	void user_menu()
+	{
+		char ch;
+
+		cout << "|\t\t    enter S to signup \t\t\t|\n";
+		cout << "|\t\tenter G to contine as guest \t\t|\n";
+		cout << "|\t      enter B to return to main menu \t\t|\n";
+
+		for (int i = 0; i < 57; i++)
+		{
+			cout << "-";
+		}
+		cout << endl;
+
+		ch = _getch();
+
+		if (ch == 's' or ch == 'S')
+		{
+			signup();
+		}
+		else if (ch == 'g' or ch == 'G')
+		{
+
+		}
+		else if (ch == 'b' or ch == 'B')
+		{
+			system("cls");
+			main_menu();
+		}
+	}
+
 	bool check(string u)
 	{
 		int counter = 0;
@@ -45,11 +101,12 @@ public:
 		{
 			ofstream file;
 			file.open(user + ".txt");
-here:
+
 			if (file.is_open())
 			{
 				cout << "\t\t   password : ";
 				cin >> pass;
+			here:
 				cout << "\t\tconfirm password : ";
 				cin >> pass2;
 
@@ -60,7 +117,7 @@ here:
 					file << fname << endl;
 					file << lname << endl;
 
-					cout << "\taccount added successfully\n";
+					cout << "\n\t\taccount added successfully\n";
 				}
 				else
 				{
@@ -73,16 +130,29 @@ here:
 
 	void login()
 	{
-		string user, pass;
-		cout << "  username : ";
+		string user, pass, st[4], line;
+		cout << "\t username : ";
 		cin >> user;
 
 		ifstream file;
 		file.open(user+".txt");
 		if (file.is_open())
 		{
-			cout << "  password : ";
+			cout << "\t password : ";
 			cin >> pass;
+
+			int i = 0;
+			while (file.eof())
+			{
+				getline(file, line);
+				st[i] = line;
+				i++;
+			}
+
+			if (pass == st[1])
+			{
+				cout << "\tWelcome " << st[2] << " " << st[3] << endl;
+			}
 		}
 		else
 		{
@@ -93,7 +163,7 @@ here:
 
 int main()
 {
-	char choice,ch;
+	quiz q;
 
 	for (int i = 0; i < 57; i++)
 	{
@@ -109,10 +179,7 @@ int main()
 	}
 	cout << endl;
 
-	here:
-	cout << "|\t\t  press N for new user  \t\t|\n";
-	cout << "|\t\t   press L for login    \t\t|\n";
-	cout << "|\t\t    press E to exit \t\t\t|\n"; 
+	q.main_menu();
 
 	for (int i = 0; i < 57; i++)
 	{
@@ -120,54 +187,7 @@ int main()
 	}
 	cout << endl;
 
-	choice = _getch();
-	
-	quiz q;
-
-	if (choice == 'n' or choice == 'N')
-	{
-		cout << "|\t\t    enter S to signup \t\t\t|\n";
-		cout << "|\t\tenter G to contine as guest \t\t|\n";
-		cout << "|\t      enter B to return to main menu \t\t|\n";
-		
-		for (int i = 0; i < 57; i++)
-		{
-			cout << "-";
-		}
-		cout << endl;
-
-		ch = _getch();
-
-		if (ch == 's' or ch == 'S')
-		{
-			q.signup();
-		}
-		else if (ch == 'g' or ch == 'G')
-		{
-
-		}
-		else if (ch == 'b' or ch == 'B')
-		{
-			system("cls");
-			goto here;
-		}
-	}
-	else if (choice == 'l' or choice == 'L')
-	{
-		string user, pass;
-
-		cout << "|\t\t username : ";
-		getline(cin, user);
-
-		ifstream f;
-		f.open(user + ".txt");
-
-		if (f.is_open())
-		{
-			cout << "|\t\t password : ";
-			getline(cin, pass);
-		}
-	}
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
