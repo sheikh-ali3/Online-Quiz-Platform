@@ -13,14 +13,23 @@
 #include <ctime>
 using namespace std;
 using namespace chrono;
+using namespace this_thread;
 
 class quiz
 {
+	int score;
 public:
+	quiz()
+	{
+		score = 0;
+		cout << "score = " << score;
+	}
+
 	void main_menu()
 	{
 		char choice;
 
+	start:
 		for (int i = 0; i < 57; i++)
 		{
 			cout << "-";
@@ -45,6 +54,8 @@ public:
 			login();
 		else if (choice == 'e' or choice == 'E')
 			cout << "thank you for your visit\n";
+		else
+			cout << "Wrong choice retry!! "; sleep_for(seconds(1)); system("cls"); goto start;
 
 	}
 
@@ -70,7 +81,7 @@ public:
 		}
 		else if (ch == 'g' or ch == 'G')
 		{
-
+			game();
 		}
 		else if (ch == 'b' or ch == 'B')
 		{
@@ -129,7 +140,6 @@ public:
 					file << lname << endl;
 
 					cout << "\n\t\taccount added successfully\n";
-					system("cls");
 					main_menu();
 				}
 				else
@@ -143,10 +153,12 @@ public:
 
 	void login()
 	{
+		char c, s;
 		string user, pass, line;
 		vector<string> st;
 
-		cout << "\t username : ";
+	there:
+		cout << "\t\tusername : ";
 		cin >> user;
 
 		ifstream file;
@@ -154,7 +166,7 @@ public:
 		if (file.is_open())
 		{
 			here:
-			cout << "\t password : ";
+			cout << "\t\tpassword : ";
 			cin >> pass;
 
 			int i = 0;
@@ -165,7 +177,40 @@ public:
 			}
 
 			if (pass == st[1])
-				cout << "\tWelcome " << st[2] << " " << st[3] << endl;
+			{
+				cout << "\n\tWelcome " << st[2] << " " << st[3] << endl << endl;
+			h:
+
+				cout << "|\t\tenter G to continue to game\t\t|\n";
+				cout << "|\t      enter B to return to main menu \t\t|\n";
+				c = _getch();
+			again:
+
+				if (c == 'G' or c == 'g')
+				{
+					sleep_for(seconds(1));
+					system("cls");
+					game();
+				h:
+
+					cout << "|\t\tenter G to play again\t\t|\n";
+					cout << "|\t      enter B to return to main menu \t\t|\n";
+					c = _getch();
+					
+					if (c == 'G' or c == 'g' or c == 'B' or c == 'b')
+						goto again;
+					else
+						cout << "try again .... "; goto h;
+				}
+				else if (c == 'B' or c == 'b')
+				{
+					sleep_for(seconds(1)); 
+					system("cls"); 
+					main_menu();
+				}
+				else
+					cout << "Wrong key .... retry!!"; sleep_for(seconds(1)); goto h;
+			}
 			else
 			{
 				cout << "\twrong password ..... retry!!\n"; 
@@ -175,12 +220,74 @@ public:
 		else
 		{
 			cout << "no record found.\n";
+			goto there;
 		}
 	}
 
 	void game()
 	{
-		
+		for (int i = 0; i < 10; i++)
+		{
+			srand(time(0));
+			float n1 = rand() % 100;
+			float n2 = rand() % 100;
+		again:
+			int op = rand() % 10;
+
+
+			switch (op)
+			{
+			case 1:
+				cout << "\t" << n1 << endl << "  +\t" << n2 << endl << "\t-------------\n";
+				answer(n1, n2, op);
+				break;
+			case 2:
+				cout << "\t" << n1 << endl << "  -\t" << n2 << endl << "  -------------\n";			answer(n1, n2, op);
+				answer(n1, n2, op);
+				break;
+			case 3:
+				cout << "\t" << n1 << endl << "  x\t" << n2 << endl << "  -------------\n";
+				answer(n1, n2, op);
+				break;
+			case 4:
+				cout << "\t" << n1 << endl << "  /\t" << n2 << endl << "  -------------\n";
+				answer(n1, n2, op);
+				break;
+			default:
+				goto again;
+			}
+		}	
+
+		cout << "\tyou scored " << score << "out of 10.\n";
+	}
+
+	void answer(float n1, float n2, int op)
+	{
+		double ans, check;
+		cin >> ans;
+
+		switch (op)
+		{
+		case 1:
+			check = n1 + n2;
+			break;
+		case 2:
+			check = n1 - n2;
+			break;
+		case 3:
+			check = n1 * n2;
+			break;
+		case 4:
+			check = n1 / n2;
+			break;
+		default:
+			cout << "unable to find answer\n";
+		}
+
+		if (ans != check)
+			cout << "Wrong answer !!! right answer is " << check << endl;
+		else
+			cout << "\tCongratulations!! your answer is correct\n"; score++;
 	}
 };
 
