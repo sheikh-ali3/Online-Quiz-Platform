@@ -16,7 +16,7 @@ public:
 	{
 		int counter = 0;
 
-		ifstream file(filename.c_str());
+		ifstream file(u+"txt");
 		
 		if (file.is_open())
 			return true;
@@ -45,7 +45,7 @@ public:
 		{
 			ofstream file;
 			file.open(user + ".txt");
-
+here:
 			if (file.is_open())
 			{
 				cout << "\t\t   password : ";
@@ -59,6 +59,13 @@ public:
 					file << pass << endl;
 					file << fname << endl;
 					file << lname << endl;
+
+					cout << "\taccount added successfully\n";
+				}
+				else
+				{
+					cout << "\tpasswords doesn't match\n";
+					goto here;
 				}
 			}
 		}
