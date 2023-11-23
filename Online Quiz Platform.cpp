@@ -16,13 +16,14 @@ public:
 	{
 		int counter = 0;
 
-		ifstream file;
-		file.open(u + ".txt");
+		ifstream file(filename.c_str());
 		
-		if (file.eof())
+		if (file.is_open())
 			return true;
 		else
 			return false;
+
+		file.close();
 	}
 
 	void signup()
