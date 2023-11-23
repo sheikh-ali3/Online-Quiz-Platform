@@ -7,7 +7,12 @@
 #include <random>
 #include <fstream>
 #include <string>
+#include <chrono>
+#include <thread>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
+using namespace chrono;
 
 class quiz
 {
@@ -171,6 +176,11 @@ public:
 		{
 			cout << "no record found.\n";
 		}
+	}
+
+	void game()
+	{
+		
 	}
 };
 
