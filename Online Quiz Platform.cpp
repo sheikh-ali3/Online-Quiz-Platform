@@ -7,6 +7,7 @@
 #include <random>
 #include <fstream>
 #include <string>
+#include <cstring>
 #include <chrono>
 #include <thread>
 #include <cstdlib>
@@ -53,7 +54,10 @@ public:
 		else if (choice == 'l' or choice == 'L')
 			login();
 		else if (choice == 'e' or choice == 'E')
+		{
 			cout << "thank you for your visit\n";
+			exit(1);
+		}
 		else
 			cout << "Wrong choice retry!! "; sleep_for(seconds(1)); system("cls"); goto start;
 
@@ -140,6 +144,10 @@ public:
 					file << lname << endl;
 
 					cout << "\n\t\taccount added successfully\n";
+					cout << "\n\t\tlogin to continue to game\n";
+					sleep_for(seconds(1));
+					system("cls");
+
 					main_menu();
 				}
 				else
@@ -179,9 +187,10 @@ public:
 			if (pass == st[1])
 			{
 				cout << "\n\tWelcome " << st[2] << " " << st[3] << endl << endl;
-			h:
+			hr:
 
-				cout << "|\t\tenter G to continue to game\t\t|\n";
+				cout << "\n|\t\tenter G to continue to game\t\t|\n";
+				cout << "|\t     enter L to check the leaderboard\t\t|\n";
 				cout << "|\t      enter B to return to main menu \t\t|\n";
 				c = _getch();
 			again:
@@ -191,7 +200,13 @@ public:
 					sleep_for(seconds(1));
 					system("cls");
 					game();
+					leaderboard(user);
 				h:
+					for (int i = 0; i < 57; i++)
+					{
+						cout << "-";
+					}
+					cout << endl;
 
 					cout << "|\t\tenter G to play again\t\t|\n";
 					cout << "|\t      enter B to return to main menu \t\t|\n";
@@ -202,6 +217,27 @@ public:
 					else
 						cout << "try again .... "; goto h;
 				}
+				else if (c == 'L' or c == 'l')
+				{
+					sleep_for(seconds(1));
+					system("cls");
+					leaderboard_display(user);
+				h2:
+					for (int i = 0; i < 57; i++)
+					{
+						cout << "-";
+					}
+					cout << endl;
+
+					cout << "|\t\tenter G to play again\t\t|\n";
+					cout << "|\t      enter B to return to main menu \t\t|\n";
+					c = _getch();
+
+					if (c == 'G' or c == 'g' or c == 'B' or c == 'b')
+						goto again;
+					else
+						cout << "try again .... "; goto h2;
+				}
 				else if (c == 'B' or c == 'b')
 				{
 					sleep_for(seconds(1)); 
@@ -209,7 +245,7 @@ public:
 					main_menu();
 				}
 				else
-					cout << "Wrong key .... retry!!"; sleep_for(seconds(1)); goto h;
+					cout << "Wrong key .... retry!!"; sleep_for(seconds(1)); goto hr;
 			}
 			else
 			{
@@ -287,7 +323,81 @@ public:
 		if (ans != check)
 			cout << "Wrong answer !!! right answer is " << check << endl;
 		else
-			cout << "\tCongratulations!! your answer is correct\n"; score++;
+		{
+			cout << "\tCongratulations!! your answer is correct\n"; 
+			score++;
+		}
+	}
+
+	void leaderboard(string user)
+	{
+		string line;
+		vector<pair<string, int>> leaderboard;
+
+		ifstream file;
+		file.open("leaderboard.txt");
+
+		if (file.is_open())
+		{
+			while (!file.eof())
+			{
+				getline(file, line);
+				size_t index = line.find(':');
+				if (index != string::npos)
+				{
+					string name = line.substr(0, index);
+					int scr = stoi(line.substr(index + 1));
+
+					leaderboard.push_back({ name,scr });
+				}
+			}
+
+			file.close();
+		}
+
+		leaderboard.push_back({ user,score });
+
+		sort(leaderboard.begin(), leaderboard.end(),
+			[](const pair<string, int>& a, const pair<string, int>& b) {
+				return a.second > b.second;
+			});
+
+		ofstream outFile("leaderboard.txt");
+		for (const auto& entry : leaderboard)
+		{
+			outFile << entry.first << ':' << entry.second << endl;
+		}
+
+	}
+
+	void leaderboard_display(string user)
+	{
+		string line;
+		vector<pair<string, int>> leaderboard;
+		int i = 1;
+
+		ifstream file;
+		file.open("leaderboard.txt");
+
+		if (file.is_open())
+		{
+			cout << "Leaderboard:\n";
+			while (!file.eof())
+			{
+				getline(file, line);
+				size_t index = line.find(':');
+				if (index != string::npos)
+				{
+					string name = line.substr(0, index);
+					int scr = stoi(line.substr(index + 1));
+
+					cout << i << ".\t";
+					cout << name << " : " << scr << endl;
+				}
+			}
+
+			file.close();
+		}
 	}
 };
 
