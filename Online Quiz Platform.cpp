@@ -7,7 +7,7 @@
 #include <random>
 #include <fstream>
 #include <string>
-#include <cstring>
+// #include <cstring>
 #include <chrono>
 #include <thread>
 #include <cstdlib>
@@ -26,79 +26,11 @@ public:
 		cout << "score = " << score;
 	}
 
-	void main_menu()
-	{
-		char choice;
-
-	start:
-		for (int i = 0; i < 57; i++)
-		{
-			cout << "-";
-		}
-		cout << endl;
-
-		cout << "|\t\t  press N for new user  \t\t|\n";
-		cout << "|\t\t   press L for login    \t\t|\n";
-		cout << "|\t\t    press E to exit \t\t\t|\n";
-
-		for (int i = 0; i < 57; i++)
-		{
-			cout << "-";
-		}
-		cout << endl;
-		
-		choice = _getch();
-
-		if (choice == 'N' or choice == 'n')
-			user_menu();
-		else if (choice == 'l' or choice == 'L')
-			login();
-		else if (choice == 'e' or choice == 'E')
-		{
-			cout << "thank you for your visit\n";
-			exit(1);
-		}
-		else
-			cout << "Wrong choice retry!! "; sleep_for(seconds(1)); system("cls"); goto start;
-
-	}
-
-	void user_menu()
-	{
-		char ch;
-
-		cout << "|\t\t    enter S to signup \t\t\t|\n";
-		cout << "|\t\tenter G to contine as guest \t\t|\n";
-		cout << "|\t      enter B to return to main menu \t\t|\n";
-
-		for (int i = 0; i < 57; i++)
-		{
-			cout << "-";
-		}
-		cout << endl;
-
-		ch = _getch();
-
-		if (ch == 's' or ch == 'S')
-		{
-			signup();
-		}
-		else if (ch == 'g' or ch == 'G')
-		{
-			game();
-		}
-		else if (ch == 'b' or ch == 'B')
-		{
-			system("cls");
-			main_menu();
-		}
-	}
-
 	bool check(string u)
 	{
 		int counter = 0;
 
-		ifstream file(u+"txt");
+		ifstream file(u+".txt");
 		
 		if (file.is_open())
 			return true;
@@ -260,46 +192,9 @@ public:
 		}
 	}
 
-	void game()
-	{
-		for (int i = 0; i < 10; i++)
-		{
-			srand(time(0));
-			float n1 = rand() % 100;
-			float n2 = rand() % 100;
-		again:
-			int op = rand() % 10;
-
-
-			switch (op)
-			{
-			case 1:
-				cout << "\t" << n1 << endl << "  +\t" << n2 << endl << "\t-------------\n";
-				answer(n1, n2, op);
-				break;
-			case 2:
-				cout << "\t" << n1 << endl << "  -\t" << n2 << endl << "  -------------\n";			answer(n1, n2, op);
-				answer(n1, n2, op);
-				break;
-			case 3:
-				cout << "\t" << n1 << endl << "  x\t" << n2 << endl << "  -------------\n";
-				answer(n1, n2, op);
-				break;
-			case 4:
-				cout << "\t" << n1 << endl << "  /\t" << n2 << endl << "  -------------\n";
-				answer(n1, n2, op);
-				break;
-			default:
-				goto again;
-			}
-		}	
-
-		cout << "\tyou scored " << score << "out of 10.\n";
-	}
-
 	void answer(float n1, float n2, int op)
 	{
-		double ans, check;
+		double ans, check = 0;
 		cin >> ans;
 
 		switch (op)
@@ -313,7 +208,7 @@ public:
 		case 3:
 			check = n1 * n2;
 			break;
-		case 4:
+		case 0:
 			check = n1 / n2;
 			break;
 		default:
@@ -324,10 +219,120 @@ public:
 			cout << "Wrong answer !!! right answer is " << check << endl;
 		else
 		{
-			cout << "\tCongratulations!! your answer is correct\n"; 
+			cout << "\tCongratulations!! your answer is correct\n";
 			score++;
+
+			cout << "test: " << score << endl;
 		}
 	}
+
+	void game()
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			srand(time(0));
+			float n1 = rand() % 100;
+			float n2 = rand() % 100;
+		again:
+			int op = rand() % 4;
+			cout << "op: " << op << endl;
+
+			switch (op)
+			{
+			case 1:
+				cout << "\t" << n1 << endl << "  +\t" << n2 << endl << "\t-------------\n";
+				answer(n1, n2, op);
+				break;
+			case 2:
+				cout << "\t" << n1 << endl << "  -\t" << n2 << endl << "  -------------\n";
+				answer(n1, n2, op);
+				break;
+			case 3:
+				cout << "\t" << n1 << endl << "  x\t" << n2 << endl << "  -------------\n";
+				answer(n1, n2, op);
+				break;
+			case 0:
+				cout << "\t" << n1 << endl << "  /\t" << n2 << endl << "  -------------\n";
+				answer(n1, n2, op);
+				break;
+
+			default:
+				goto again;
+			}
+		}	
+
+		cout << "\tyou scored " << score << "out of 10.\n";
+		sleep_for(seconds(2));
+	}
+
+	void user_menu()
+	{
+		char ch;
+
+		cout << "|\t\t    enter S to signup \t\t\t|\n";
+		cout << "|\t\tenter G to contine as guest \t\t|\n";
+		cout << "|\t      enter B to return to main menu \t\t|\n";
+
+		for (int i = 0; i < 57; i++)
+		{
+			cout << "-";
+		}
+		cout << endl;
+
+		ch = _getch();
+
+		if (ch == 's' or ch == 'S')
+		{
+			signup();
+		}
+		else if (ch == 'g' or ch == 'G')
+		{
+			game();
+		}
+		else if (ch == 'b' or ch == 'B')
+		{
+			system("cls");
+			main_menu();
+		}
+	}
+
+	void main_menu()
+	{
+		char choice;
+
+	start:
+		for (int i = 0; i < 57; i++)
+		{
+			cout << "-";
+		}
+		cout << endl;
+
+		cout << "|\t\t  press N for new user  \t\t|\n";
+		cout << "|\t\t   press L for login    \t\t|\n";
+		cout << "|\t\t    press E to exit \t\t\t|\n";
+
+		for (int i = 0; i < 57; i++)
+		{
+			cout << "-";
+		}
+		cout << endl;
+
+		choice = _getch();
+
+		if (choice == 'N' or choice == 'n')
+			user_menu();
+		else if (choice == 'l' or choice == 'L')
+			login();
+		else if (choice == 'e' or choice == 'E')
+		{
+			cout << "thank you for your visit\n";
+			exit(1);
+		}
+		else
+			cout << "Wrong choice retry!! "; sleep_for(seconds(1)); system("cls"); goto start;
+
+	}
+
 
 	void leaderboard(string user)
 	{
@@ -401,31 +406,26 @@ public:
 	}
 };
 
+void drawHorizontal()
+{
+	for (int i = 0; i < 57; i++)
+	{
+		cout << "-";
+	}
+	cout << endl;
+}
+
 int main()
 {
 	quiz q;
 
-	for (int i = 0; i < 57; i++)
-	{
-		cout << "-";
-	}
-	cout << endl;
+	drawHorizontal();
 
 	cout << "|\tWelcome to Universal Truth Quiz Platform.\t|\n";
 	
-	for (int i = 0; i < 57; i++)
-	{
-		cout << "-";
-	}
-	cout << endl;
-
 	q.main_menu();
 
-	for (int i = 0; i < 57; i++)
-	{
-		cout << "-";
-	}
-	cout << endl;
+	drawHorizontal();
 
 	return 0;
 }
