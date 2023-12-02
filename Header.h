@@ -25,10 +25,14 @@ class quiz
 	void user_menu();
 	void leaderboard(string user);
 	void leaderboard_display(string user);
+	void game_menu();
+	void math();
+	void DSA();
+	void OOP();
+	void PF();
 
 public:
 	quiz();
-	void game();
 	void main_menu();
 	
 };

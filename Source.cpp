@@ -13,7 +13,6 @@ quiz::quiz()
 {
 	score = 0;
 	count = 0;
-	cout << "score = " << score;
 }
 
 bool quiz::check(string u)
@@ -89,7 +88,7 @@ void quiz::login()
 	vector<string> st;
 
 there:
-	cout << "\t\tusername : ";
+	cout << "|\t\tusername : ";
 	cin >> user;
 
 	ifstream file;
@@ -109,7 +108,7 @@ there:
 
 		if (pass == st[1])
 		{
-			cout << "\n\tWelcome " << st[2] << " " << st[3] << endl << endl;
+			cout << "\n|\t\tWelcome back " << st[2] << " " << st[3] << "\t\t|\n" << endl;
 		hr:
 
 			cout << "\n|\t\tenter G to continue to game\t\t|\n";
@@ -122,7 +121,7 @@ there:
 			{
 				sleep_for(seconds(1));
 				system("cls");
-				game();
+				game_menu();
 				leaderboard(user);
 			h:
 				for (int i = 0; i < 57; i++)
@@ -138,7 +137,7 @@ there:
 				if (c == 'G' or c == 'g' or c == 'B' or c == 'b')
 					goto again;
 				else
-					cout << "try again .... "; goto h;
+					cout << "|\t\ttry again .... \t\t|\n"; goto h;
 			}
 			else if (c == 'L' or c == 'l')
 			{
@@ -168,7 +167,7 @@ there:
 				main_menu();
 			}
 			else
-				cout << "Wrong key .... retry!!"; sleep_for(seconds(1)); goto hr;
+				cout << "|\tWrong key .... retry!!"; sleep_for(seconds(1)); goto hr;
 		}
 		else
 		{
@@ -178,7 +177,7 @@ there:
 	}
 	else
 	{
-		cout << "no record found.\n";
+		cout << "|\t\t no record found...retry \t\t|\n";
 		goto there;
 	}
 }
@@ -203,17 +202,17 @@ void quiz::answer(float n1, float n2, int op)
 		check = n1 / n2;
 		break;
 	default:
-		cout << "unable to find answer\n";
+		cout << "|\t\tunable to find answer\t\t|\n";
 	}
 
 	if (ans != check)
-		cout << "Wrong answer !!! right answer is " << check << endl;
+		cout << "|\tWrong answer !!! right answer is " << check << "\t|\n";
 	else
 	{
-		cout << "\tCongratulations!! your answer is correct\n";
+		cout << "|\tCongratulations!! your answer is correct\t|\n";
 		score++;
 
-		cout << "test: " << score << endl;
+		cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
 	}
 }
 
@@ -229,24 +228,28 @@ void quiz::questions(float n1, float n2, int o)
 	int max = 4, min = 1;
 again:
 	int op = rand() % (max - min + 1);
-	cout << "op: " << op << endl;
+	//cout << "op: " << op << endl;
 
 	switch (op)
 	{
 	case 1:
-		cout << "\t" << n1 << endl << "  +\t" << n2 << endl << "\t-------------\n";
+		cout << "|\t Question no. " << count + 1 << ": \t\t\t\t|\n";
+		cout << "|\t\t\t\t" << n1 << "\t\t\t|\n" << "|\t\t\t  +\t" << n2 << "\t\t\t|\n" << "|\t\t\t---------------\t\t\t|\n\t\t\t\t";
 		answer(n1, n2, op);
 		break;
 	case 2:
-		cout << "\t" << n1 << endl << "  -\t" << n2 << endl << "  -------------\n";
+		cout << "|\t Question no. " << count + 1 << ": \t\t\t\t|\n";
+		cout << "|\t\t\t\t" << n1 << "\t\t\t|\n" << "|\t\t\t  -\t" << n2 << "\t\t\t|\n" << "|\t\t\t---------------\t\t\t|\n\t\t\t\t";
 		answer(n1, n2, op);
 		break;
 	case 3:
-		cout << "\t" << n1 << endl << "  x\t" << n2 << endl << "  -------------\n";
+		cout << "|\t Question no. " << count + 1 << ": \t\t\t\t|\n";
+		cout << "|\t\t\t\t" << n1 << "\t\t\t|\n" << "|\t\t\t  x\t" << n2 << "\t\t\t|\n" << "|\t\t\t---------------\t\t\t|\n\t\t\t\t";
 		answer(n1, n2, op);
 		break;
 	case 0:
-		cout << "\t" << n1 << endl << "  /\t" << n2 << endl << "  -------------\n";
+		cout << "|\t Question no. " << count + 1 << ": \t\t\t\t|\n";
+		cout << "|\t\t\t\t" << n1 << "\t\t\t|\n" << "|\t\t\t  /\t" << n2 << "\t\t\t|\n" << "|\t\t\t---------------\t\t\t|\n\t\t\t\t";
 		answer(n1, n2, op);
 		break;
 	default:
@@ -254,11 +257,11 @@ again:
 	}
 
 	count++;
-
+	style();
 	questions(num1, num2, op);
 }
 
-void quiz::game()
+void quiz::math()
 {
 	srand(time(0));
 	float n1 = rand() % 100;
@@ -294,7 +297,7 @@ void quiz::user_menu()
 	}
 	else if (ch == 'g' or ch == 'G')
 	{
-		game();
+		game_menu();
 	}
 	else if (ch == 'b' or ch == 'B')
 	{
@@ -403,4 +406,70 @@ void quiz::leaderboard_display(string user)
 	}
 }
 
+void quiz::game_menu()
+{
+	char choice;
 
+	here:
+	system("cls");
+	style();
+	cout << "|\t\tChoose the subject of quiz \t\t|\n";
+	style();
+	cout << "|\t\tPress 1 for basic DSA in C++\t\t|\n";
+	cout << "|\t\tPress 2 for basic OOP in C++\t\t|\n";
+	cout << "|\t\tPress 3 for basic PF  in C++\t\t|\n";
+	cout << "|\t\tPress 4 for basic mathematics\t\t|\n";
+	style();
+
+	choice=_getch();
+
+	switch (choice)
+	{
+	case '1':
+		system("cls");
+		cout << "|\tproceeding to DSA questions choose\t\t|\n|\t\t the right answer from below options\t|\n";
+		style();
+		DSA();
+		break;
+
+	case '2':
+		system("cls");
+		cout << "|\tproceeding to OOP questions choose\t\t|\n|\t\t the right answer from below options\t|\n";
+		OOP();
+		break;
+
+	case '3':
+		system("cls");
+		cout << "|\tproceeding to PF questions choose\t\t|\n|\t\t the right answer from below options\t|\n";
+		style(); 
+		PF();
+		break;
+
+	case '4':
+		system("cls");
+		cout << "|\tproceeding to mathematics questions \t\t|\n|\t\t enter correct answer for below sums\t|\n";
+		style(); 
+		math();
+		break;
+
+	default:
+		cout << "|\t Invalid input ..... retry!!\t\t|\n";
+		sleep_for(seconds(1));
+		goto here;
+	}
+}
+
+void quiz::DSA()
+{
+
+}
+
+void quiz::OOP()
+{
+
+}
+
+void quiz::PF()
+{
+
+}
