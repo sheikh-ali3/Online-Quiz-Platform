@@ -1,5 +1,20 @@
 #include"Header.h"
 
+#include <iostream>
+#include <conio.h>
+#include <vector>
+#include <random>
+#include <fstream>
+#include <string>
+#include <chrono>
+#include <thread>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+using namespace chrono;
+using namespace this_thread;
+
+
 void style()
 {
 	for (int i = 0; i < 57; i++)
@@ -28,7 +43,6 @@ bool quiz::check(string u)
 
 	file.close();
 }
-
 
 void quiz::signup()
 {
@@ -122,7 +136,7 @@ there:
 				sleep_for(seconds(1));
 				system("cls");
 				game_menu();
-				leaderboard(user);
+				leaderboard_update(user);
 			h:
 				for (int i = 0; i < 57; i++)
 				{
@@ -327,7 +341,8 @@ start:
 		login();
 	else if (choice == 'e' or choice == 'E')
 	{
-		cout << "thank you for your visit\n";
+		cout << "|\t\tthank you for your visit\t\t|\n";
+		cout << "|\t press any key to close this window\t\t|\n";
 		exit(1);
 	}
 	else
@@ -335,14 +350,14 @@ start:
 
 }
 
-void quiz::leaderboard(string user)
+void quiz::leaderboard_update(string user)
 {
 	string line;
-	vector<pair<string, int>> leaderboard;
 
 	ifstream file;
 	file.open("leaderboard.txt");
 
+	leaderboard l;
 	if (file.is_open())
 	{
 		while (!file.eof())
@@ -353,33 +368,23 @@ void quiz::leaderboard(string user)
 			{
 				string name = line.substr(0, index);
 				int scr = stoi(line.substr(index + 1));
-
-				leaderboard.push_back({ name,scr });
+				l.add(name, scr);
 			}
 		}
 
 		file.close();
 	}
 
-	leaderboard.push_back({ user,score });
+	l.add(user, score);
 
-	sort(leaderboard.begin(), leaderboard.end(),
-		[](const pair<string, int>& a, const pair<string, int>& b) {
-			return a.second > b.second;
-		});
+	l.sort();
 
 	ofstream outFile("leaderboard.txt");
-	for (const auto& entry : leaderboard)
-	{
-		outFile << entry.first << ':' << entry.second << endl;
-	}
-
 }
 
 void quiz::leaderboard_display(string user)
 {
 	string line;
-	vector<pair<string, int>> leaderboard;
 	int i = 1;
 
 	ifstream file;
@@ -471,5 +476,265 @@ void quiz::OOP()
 
 void quiz::PF()
 {
+	int counter = 1;
+	char option;
 
+	srand(time(0));
+	int min = 1, max = 40;
+	int op = rand() % (max - min + 1);
+
+	switch (op)
+	{
+	case 1:
+		cout << "|\t Question no. " << counter << "\t\t\t\t|\n";
+		cout << "| What is the purpose of the \"cout\" object in C++ ? \t| \n";
+		cout << "|\t A) Input data from the user\t|\n";
+		cout << "|\t B) Print data to the console\t|\n";
+		cout << "|\t C) Read data from a file\t|\n";
+		cout << "|\t D) Perform arithmetic operations\t|\n\t\t";
+		cin >> option;
+
+		if (option == 'b' or option == 'B')
+		{
+			counter++;
+			cout << "|\tCongratulations!! your answer is correct\t|\n";
+			score++;
+			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+		}
+		else
+		{
+			cout << "|\tWrong choice !!! right option is B \t\t|\n";
+			counter++;
+		}
+		break;
+
+	case 2:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		cout << "| Which data type in C++ is used to store integer values? \t| \n";
+		cout << "|\t\t A) int \t\t\t|\n";
+		cout << "|\t\t B) float \t\t\t|\n";
+		cout << "|\t\t C) char \t\t\t|\n";
+		cout << "|\t\t D) double \t\t\t|\n\t\t";
+		cin >> option;
+
+		if (option == 'a' or option == 'a')
+		{
+			counter++;
+			cout << "|\tCongratulations!! your answer is correct\t|\n";
+			score++;
+			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+		}
+		else
+		{
+			cout << "|\tWrong choice !!! right option is A \t\t|\n";
+			counter++;
+		}
+		break;
+
+	case 3:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 4:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 5:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 6:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 7:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 8:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 9:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 10:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 11:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 12:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 13:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 14:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 15:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 16:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 17:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 18:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 19:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 20:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 21:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 22:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 23:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 24:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 25:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 26:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 27:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 28:
+		cout << "|\t\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 29:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 30:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 31:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 32:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 33:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 34:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 35:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 36:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 37:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 38:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 39:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	case 40:
+		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+		break;
+
+	default:
+		cout << "inavalid option\n";
+	}
+}
+
+leaderboard::leaderboard()
+{
+	head = NULL;
+}
+
+bool leaderboard::isEmpty()
+{
+	if (head == NULL)
+		return true;
+	else
+		return false;
+}
+
+void leaderboard::add(string n, int s)
+{
+	if (isEmpty())
+	{
+		head = new node(n, s, NULL);
+	}
+	else
+	{
+		node* p = new node(n, s, head);
+		head = p;
+	}
+}
+
+void leaderboard::sort()
+{
+	if (isEmpty())
+	{
+		cout << "linklist is empty......\n";
+	}
+	else
+	{
+		node* current = head;
+		node* keyAd = current;
+		while (current->get_next() != NULL)
+		{
+			int key = keyAd->get_score();
+			if (key > current->get_score())
+			{
+				node* temp = head;
+				head = current;
+				current->set_next(temp);
+				keyAd = keyAd->get_next();
+			}
+			current = current->get_next();
+		}
+	}
 }
