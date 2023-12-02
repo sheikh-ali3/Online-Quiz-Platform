@@ -483,7 +483,7 @@ void quiz::PF()
 	int min = 1, max = 40;
 	int op = rand() % (max - min + 1);
 
-	op = 3;
+	//op = 3;
 	switch (op)
 	{
 	case 1:
@@ -555,6 +555,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is C \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 4:
@@ -578,6 +579,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 5:
@@ -601,6 +603,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 6:
@@ -624,6 +627,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 7:
@@ -647,6 +651,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 8:
@@ -670,6 +675,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 9:
@@ -693,6 +699,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 10:
@@ -716,6 +723,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 11:
@@ -739,6 +747,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 12:
@@ -762,6 +771,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 13:
@@ -785,6 +795,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 14:
@@ -808,6 +819,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 15:
@@ -831,6 +843,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 16:
@@ -854,6 +867,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 17:
@@ -877,6 +891,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 18:
@@ -900,6 +915,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 19:
@@ -923,6 +939,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 20:
@@ -946,6 +963,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 21:
@@ -969,6 +987,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 22:
@@ -992,6 +1011,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 23:
@@ -1015,6 +1035,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 24:
@@ -1038,6 +1059,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 25:
@@ -1061,6 +1083,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 26:
@@ -1084,6 +1107,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 27:
@@ -1130,6 +1154,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 29:
@@ -1153,6 +1178,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 30:
@@ -1176,6 +1202,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 31:
@@ -1199,6 +1226,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 32:
@@ -1222,6 +1250,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 33:
@@ -1245,6 +1274,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 34:
@@ -1268,6 +1298,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 35:
@@ -1291,6 +1322,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 36:
@@ -1314,6 +1346,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 37:
@@ -1337,6 +1370,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 38:
@@ -1360,6 +1394,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 39:
@@ -1383,6 +1418,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	case 40:
@@ -1406,6 +1442,7 @@ void quiz::PF()
 			cout << "|\tWrong choice !!! right option is A \t\t|\n";
 			counter++;
 		}
+		style();
 		break;
 
 	default:
