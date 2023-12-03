@@ -483,7 +483,7 @@ void quiz::OOP()
 		int min = 1, max = 40;
 		int op = rand() % (max - min + 1);
 
-		op = 13;
+		op = 16;
 		switch (op)
 		{
 		case 1:
@@ -800,14 +800,14 @@ void quiz::OOP()
 
 		case 14:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| what is the function of the \"switch\" statement? \t| \n";
-			cout << "|\t A) To execute a block of code repeatedly \t|\n";
-			cout << "|\t B) To compare multiple conditions and execute\t|\n|\t\t the appropriate block of code \t\t|\n";
-			cout << "|\t C) To terminate the program \t\t\t|\n";
-			cout << "|\t D) To declare variables \t\t\t|\n\t\t";
+			cout << "|\t In C++, what is a constructor? \t\t| \n";
+			cout << "|\t A) A function that is called when an object is |\n|\t\t\t created \t\t\t|\n";
+			cout << "|\t B) A function that is called when an object is |\n|\t\t\t destroyed \t\t\t|\n";
+			cout << "|\t C) A function that is used to initialize an\t|\n|\t\t object's data members \t\t\t|\n";
+			cout << "|\t D) A function that is used to copy the data\t|\n|\t\t of one object into another \t\t|\n\t\t";
 			cin >> option;
 
-			if (option == 'B' or option == 'b')
+			if (option == 'A' or option == 'a')
 			{
 				counter++;
 				cout << "|\tCongratulations!! your answer is correct\t|\n";
@@ -816,7 +816,7 @@ void quiz::OOP()
 			}
 			else
 			{
-				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
 				counter++;
 			}
 			style();
@@ -824,11 +824,11 @@ void quiz::OOP()
 
 		case 15:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| Which data type in C++ is used to store characters? \t| \n";
-			cout << "|\t\t A) char \t\t\t\t|\n";
-			cout << "|\t\t B) string \t\t\t\t|\n";
-			cout << "|\t\t C) float \t\t\t\t|\n";
-			cout << "|\t\t D) double \t\t\t\t|\n\t\t";
+			cout << "| What is the purpose of the \"this\" pointer in C++? \t| \n";
+			cout << "|\t A) It points to the base class in an \t\t|\n|\t\tinheritance hierarchy \t\t\t|\n";
+			cout << "|\t B) It points to the derived class in an \t|\n|\t\tinheritance hierarchy \t\t\t|\n";
+			cout << "|\t C) It points to the current object's address \t|\n";
+			cout << "|\t D) It points to the global scope of program\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -848,11 +848,11 @@ void quiz::OOP()
 
 		case 16:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the purpose of the \"continue\" statement\t|\n|\t\t in a loop in C++?\t\t\t| \n";
-			cout << "|\t A) Terminate the loop \t\t\t\t|\n";
-			cout << "|\t B) Skip the remaining code in the loop\t\t|\n|\t\t and move to the next iteration \t|\n";
-			cout << "|\t C) Exit the entire program \t\t\t|\n";
-			cout << "|\t D) Restart the loop from the beginning \t|\n\t\t";
+			cout << "| Which OOP principle states that a derived class object can be treated as an object of its base class?\t| \n";
+			cout << "|\t A) Inheritance \t\t\t\t|\n";
+			cout << "|\t B) Encapsulation \t|\n";
+			cout << "|\t C) Polymorphism \t\t\t|\n";
+			cout << "|\t D) Abstraction \t|\n\t\t";
 			cin >> option;
 
 			if (option == 'B' or option == 'b')
