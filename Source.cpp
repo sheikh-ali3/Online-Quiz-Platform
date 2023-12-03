@@ -441,6 +441,7 @@ void quiz::game_menu()
 	case '2':
 		system("cls");
 		cout << "|\tproceeding to OOP questions choose\t\t|\n|\t\t the right answer from below options\t|\n";
+		style();
 		OOP();
 		break;
 
@@ -482,16 +483,16 @@ void quiz::OOP()
 		int min = 1, max = 40;
 		int op = rand() % (max - min + 1);
 
-		op = 1;
+		op = 13;
 		switch (op)
 		{
 		case 1:
 			cout << "|\t Question no. " << counter << "\t\t\t\t\t|\n";
-			cout << "| What is the fundamental principle of OOP that states|\n\t \"a class can inherit the characteristics(properties and behaviors) of another class\"?| \n";
-			cout << "|\t A) Input data from the user\t\t\t|\n";
-			cout << "|\t B) Print data to the console\t\t\t|\n";
-			cout << "|\t C) Read data from a file\t\t\t|\n";
-			cout << "|\t D) Perform arithmetic operations\t\t|\n\t\t";
+			cout << "|  What is the fundamental principle of OOP that states |\n|\t \"a class can inherit the characteristics\t|\n|\t (properties and behaviors) of another class\"?  | \n";
+			cout << "|\t\t A) Abstraction\t\t\t\t|\n";
+			cout << "|\t\t B) Inheritance\t\t\t\t|\n";
+			cout << "|\t\t C) Encapsulation\t\t\t|\n";
+			cout << "|\t\t D) Polymorphism\t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'b' or option == 'B')
@@ -511,107 +512,11 @@ void quiz::OOP()
 
 		case 2:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| Which data type in C++ is use to store integer value? | \n";
-			cout << "|\t\t A) int \t\t\t\t|\n";
-			cout << "|\t\t B) float \t\t\t\t|\n";
-			cout << "|\t\t C) char \t\t\t\t|\n";
-			cout << "|\t\t D) double \t\t\t\t|\n\t\t";
-			cin >> option;
-
-			if (option == 'A' or option == 'a')
-			{
-				counter++;
-				cout << "|\tCongratulations!! your answer is correct\t|\n";
-				score++;
-				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-			}
-			else
-			{
-				cout << "|\tWrong choice !!! right option is A \t\t|\n";
-				counter++;
-			}
-			style();
-			break;
-
-		case 3:
-			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| Which loop structure in C++ executes the code block\t|\n|\t at least once before checking the condition? \t| \n";
-			cout << "|\t A) for loop \t\t\t\t\t|\n";
-			cout << "|\t B) while loop \t\t\t\t\t|\n";
-			cout << "|\t C) do-while loop \t\t\t\t|\n";
-			cout << "|\t D) if-else loop \t\t\t\t|\n\t\t";
-			cin >> option;
-
-			if (option == 'c' or option == 'C')
-			{
-				counter++;
-				cout << "|\tCongratulations!! your answer is correct\t|\n";
-				score++;
-				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-			}
-			else
-			{
-				cout << "|\tWrong choice !!! right option is C \t\t|\n";
-				counter++;
-			}
-			style();
-			break;
-
-		case 4:
-			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What does the \"break\" statement do in a loop in C++?\t| \n";
-			cout << "| A) Terminates the loop and transfers control to\t|\n|\t\t the next iteration \t\t\t|\n";
-			cout << "| B) Skips the current iteration and continues with the |\n|\t\t next iteration \t\t\t|\n";
-			cout << "| C) Exits the entire program \t\t\t\t|\n";
-			cout << "| D) Executes the code block repeatedly \t\t|\n\t\t";
-			cin >> option;
-
-			if (option == 'A' or option == 'a')
-			{
-				counter++;
-				cout << "|\tCongratulations!! your answer is correct\t|\n";
-				score++;
-				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-			}
-			else
-			{
-				cout << "|\tWrong choice !!! right option is A \t\t|\n";
-				counter++;
-			}
-			style();
-			break;
-
-		case 5:
-			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t\t\t|\n\t\t";
-			cin >> option;
-
-			if (option == 'A' or option == 'a')
-			{
-				counter++;
-				cout << "|\tCongratulations!! your answer is correct\t|\n";
-				score++;
-				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-			}
-			else
-			{
-				cout << "|\tWrong choice !!! right option is A \t\t|\n";
-				counter++;
-			}
-			style();
-			break;
-
-		case 6:
-			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the purpose of the \"cin\" object in C++?\t| \n";
-			cout << "|\t A) Print data to the console \t\t\t|\n";
-			cout << "|\t B) Read data from a file \t\t\t|\n";
-			cout << "|\t C) Input data from the user \t\t\t|\n";
-			cout << "|\t D) Perform arithmetic operations \t\t|\n\t\t";
+			cout << "| Which keyword is used to define a child class that\t|\n|\t inherits from a parent class in C++? \t\t| \n";
+			cout << "|\t\t A) using \t\t\t\t|\n";
+			cout << "|\t\t B) extends \t\t\t\t|\n";
+			cout << "|\t\t C) inherit \t\t\t\t|\n";
+			cout << "|\t\t D) class \t\t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'C' or option == 'c')
@@ -629,16 +534,136 @@ void quiz::OOP()
 			style();
 			break;
 
-		case 7:
+		case 3:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| Which operator in C++ is used to access the value\t|\n|\t stored at a memory address?\t\t\t| \n";
-			cout << "|\t\t\t A) * \t\t\t\t|\n";
-			cout << "|\t\t\t B) & \t\t\t\t|\n";
-			cout << "|\t\t\t C) -> \t\t\t\t|\n";
-			cout << "|\t\t\t D) $ \t\t\t\t|\n\t\t";
+			cout << "|\t In OOP, what does \"Encapsulation\" refer to?\t|\n";
+			cout << "|\t A) Hiding implementation details and \t\t|\n|\t\t exposing only necessary features\t|\n";
+			cout << "|\t B) Inheriting properties from a parent class\t|\n";
+			cout << "|\t C) Creating multiple instances of a class\t|\n";
+			cout << "|\t D) Overloading operators in a class\t\t|\n\t\t";
 			cin >> option;
 
-			if (option == 'c' or option == 'C')
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 4:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which access specifier allows class members to be\t|\n|\t accessed by any function in the same program?  |\n";
+			cout << "|\t\t A) public \t\t\t\t|\n";
+			cout << "|\t\t B) private \t\t\t\t|\n";
+			cout << "|\t\t C) protected \t\t\t\t|\n";
+			cout << "|\t\t D) friend \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 5:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What does the term \"Polymorphism\" mean in OOP? \t| \n";
+			cout << "|\t A) Ability to access different classes members |\n";
+			cout << "|\t B) Ability of a function to perform different  |\n|\t tasks based on the object it is called on \t|\n";
+			cout << "|\t C) Ability to create multiple objects of class |\n";
+			cout << "|\t D) Ability to inherit properties from multiple |\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 6:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which keyword in C++ is used to create an alias \t|\n|\t\t for a data type?\t\t\t| \n";
+			cout << "|\t\t\t A) typedef \t\t\t|\n";
+			cout << "|\t\t\t B) typename \t\t\t|\n";
+			cout << "|\t\t\t C) using \t\t\t|\n";
+			cout << "|\t\t\t D) define \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 7:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| In OOP, what is the concept of \"Overloading\" in C++?\t| \n";
+			cout << "|\t A) Creating multiple functions with the same\t|\n|\t\t name but different parameters \t\t|\n";
+			cout << "|\t B) Inheriting properties from a parent class\t|\n";
+			cout << "|\t C) Defining a function within another function |\n";
+			cout << "|\t D) Providing multiple access levels for class  |\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 8:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which OOP concept emphasizes that objects created from|\n| class can be treated as instances of their superclass?| \n";
+			cout << "|\t\t A) Encapsulation \t\t\t|\n";
+			cout << "|\t\t B) Inheritance \t\t\t|\n";
+			cout << "|\t\t C) Polymorphism \t\t\t|\n";
+			cout << "|\t\t D) Abstraction \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
 			{
 				counter++;
 				cout << "|\tCongratulations!! your answer is correct\t|\n";
@@ -653,40 +678,16 @@ void quiz::OOP()
 			style();
 			break;
 
-		case 8:
-			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the purpose of the \"++\" operator in C++?\t| \n";
-			cout << "|\t A) Decrement a value by 1 \t\t\t|\n";
-			cout << "|\t B) Add 1 to a value \t\t\t\t|\n";
-			cout << "|\t C) Multiply a value by 2 \t\t\t|\n";
-			cout << "|\t D) Divide a value by 2 \t\t\t|\n\t\t";
-			cin >> option;
-
-			if (option == 'B' or option == 'b')
-			{
-				counter++;
-				cout << "|\tCongratulations!! your answer is correct\t|\n";
-				score++;
-				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-			}
-			else
-			{
-				cout << "|\tWrong choice !!! right option is B \t\t|\n";
-				counter++;
-			}
-			style();
-			break;
-
 		case 9:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| Which C++ keyword is used to declare a constant?\t| \n";
-			cout << "|\t\t A) var \t\t\t\t|\n";
-			cout << "|\t\t B) const \t\t\t\t|\n";
-			cout << "|\t\t C) constant \t\t\t\t|\n";
-			cout << "|\t\t D) static \t\t\t\t|\n\t\t";
+			cout << "| In C++, what is the purpose of the \"virtual\" keyword\t|\n|\t\t  in a base class function?\t\t| \n";
+			cout << "|\t A) It prevents the function from being\t\t|\n|\t\t inherited by derived classes\t\t|\n";
+			cout << "|\t B) It ensures the function is called first\t|\n|\t\t in the program\t\t\t\t|\n";
+			cout << "|\t C) It allows derived classes to override\t|\n|\t\t the function\t\t\t\t|\n";
+			cout << "|\t D) It restricts the function's access to\t|\n|\t\t the base class only\t\t\t|\n\t\t";
 			cin >> option;
 
-			if (option == 'B' or option == 'b')
+			if (option == 'C' or option == 'c')
 			{
 				counter++;
 				cout << "|\tCongratulations!! your answer is correct\t|\n";
@@ -695,7 +696,7 @@ void quiz::OOP()
 			}
 			else
 			{
-				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
 				counter++;
 			}
 			style();
@@ -703,11 +704,11 @@ void quiz::OOP()
 
 		case 10:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What does the \"else\" statement represent in an\t|\n|\t\t if-else construct in C++?\t\t| \n";
-			cout << "|\t A) It indicates the end of the if block \t|\n";
-			cout << "|\t B) It specifies the condition for the if block |\n";
-			cout << "|\t C) It contains the code to be executed if\t|\n|\t\t the condition is false \t\t|\n";
-			cout << "|\t D) It defines the variable to be used in \t|\n|\t\t the if block \t\t\t\t|\n\t\t";
+			cout << "| Which feature of OOP allows a class to have multiple  |\n| methods with the same name but different parameters?  | \n";
+			cout << "|\t\t A) Inheritance \t\t\t|\n";
+			cout << "|\t\t B) Encapsulation \t\t\t|\n";
+			cout << "|\t\t C) Polymorphism \t\t\t|\n";
+			cout << "|\t\t D) Abstraction \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'C' or option == 'c')
@@ -727,14 +728,14 @@ void quiz::OOP()
 
 		case 11:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the purpose of the \"sizeof\" operator in C++?\t| \n";
-			cout << "|\t A) Returns the size of a variable in bytes \t|\n";
-			cout << "|\t B) Performs addition on two variables \t\t|\n";
-			cout << "|\t C) Checks if two variables are of the same type|\n";
-			cout << "|\t D) Converts variables to a specific size \t|\n\t\t";
+			cout << "| Which access specifier in C++ restricts access to\t|\n|\t class members only within the same class? \t| \n";
+			cout << "|\t\t\t A) public \t\t\t|\n";
+			cout << "|\t\t\t B) private \t\t\t|\n";
+			cout << "|\t\t\t C) protected \t\t\t|\n";
+			cout << "|\t\t\t D) friend \t\t\t|\n\t\t";
 			cin >> option;
 
-			if (option == 'A' or option == 'a')
+			if (option == 'B' or option == 'b')
 			{
 				counter++;
 				cout << "|\tCongratulations!! your answer is correct\t|\n";
@@ -743,7 +744,7 @@ void quiz::OOP()
 			}
 			else
 			{
-				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
 				counter++;
 			}
 			style();
@@ -751,11 +752,11 @@ void quiz::OOP()
 
 		case 12:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| Which type of control structure allows a program\t|\n|\t\t to choose between two or more paths?\t| \n";
-			cout << "|\t\t\t A) Sequence \t\t\t|\n";
-			cout << "|\t\t\t B) Iteration \t\t\t|\n";
-			cout << "|\t\t\t C) Selection \t\t\t|\n";
-			cout << "|\t\t\t D) Looping \t\t\t|\n\t\t";
+			cout << "| What is the term used for a function defined\t\t|\n|\t inside a class in C++?\t\t\t\t| \n";
+			cout << "|\t\t\t A) Method \t\t\t|\n";
+			cout << "|\t\t\t B) Procedure \t\t\t|\n";
+			cout << "|\t\t\t C) Member function \t\t|\n";
+			cout << "|\t\t\t D) Subroutine \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'C' or option == 'c')
@@ -775,14 +776,14 @@ void quiz::OOP()
 
 		case 13:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What does the \" || \" operator represent in C++? \t| \n";
-			cout << "|\t\t A) Logical OR \t\t\t\t|\n";
-			cout << "|\t\t B) Bitwise OR \t\t\t\t|\n";
-			cout << "|\t\t C) Assignment \t\t\t\t|\n";
-			cout << "|\t\t D) Exclusive OR \t\t\t|\n\t\t";
+			cout << "| Which OOP concept involves bundling data and methods  |\n|\tthat work on the data into a single unit?\t| \n";
+			cout << "|\t\t A) Abstraction \t\t\t|\n";
+			cout << "|\t\t B) Inheritance \t\t\t|\n";
+			cout << "|\t\t C) Encapsulation \t\t\t|\n";
+			cout << "|\t\t D) Polymorphism \t\t\t|\n\t\t";
 			cin >> option;
 
-			if (option == 'B' or option == 'b')
+			if (option == 'A' or option == 'a')
 			{
 				counter++;
 				cout << "|\tCongratulations!! your answer is correct\t|\n";
@@ -791,7 +792,7 @@ void quiz::OOP()
 			}
 			else
 			{
-				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
 				counter++;
 			}
 			style();
