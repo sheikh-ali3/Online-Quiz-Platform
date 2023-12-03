@@ -472,7 +472,987 @@ void quiz::DSA()
 
 void quiz::OOP()
 {
+	int counter = 1;
+	char option;
 
+	for (int i = 0; i < 10; i++)
+	{
+	hre:
+		srand(time(0));
+		int min = 1, max = 40;
+		int op = rand() % (max - min + 1);
+
+		op = 1;
+		switch (op)
+		{
+		case 1:
+			cout << "|\t Question no. " << counter << "\t\t\t\t\t|\n";
+			cout << "| What is the fundamental principle of OOP that states|\n\t \"a class can inherit the characteristics(properties and behaviors) of another class\"?| \n";
+			cout << "|\t A) Input data from the user\t\t\t|\n";
+			cout << "|\t B) Print data to the console\t\t\t|\n";
+			cout << "|\t C) Read data from a file\t\t\t|\n";
+			cout << "|\t D) Perform arithmetic operations\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'b' or option == 'B')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 2:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which data type in C++ is use to store integer value? | \n";
+			cout << "|\t\t A) int \t\t\t\t|\n";
+			cout << "|\t\t B) float \t\t\t\t|\n";
+			cout << "|\t\t C) char \t\t\t\t|\n";
+			cout << "|\t\t D) double \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 3:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which loop structure in C++ executes the code block\t|\n|\t at least once before checking the condition? \t| \n";
+			cout << "|\t A) for loop \t\t\t\t\t|\n";
+			cout << "|\t B) while loop \t\t\t\t\t|\n";
+			cout << "|\t C) do-while loop \t\t\t\t|\n";
+			cout << "|\t D) if-else loop \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'c' or option == 'C')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 4:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What does the \"break\" statement do in a loop in C++?\t| \n";
+			cout << "| A) Terminates the loop and transfers control to\t|\n|\t\t the next iteration \t\t\t|\n";
+			cout << "| B) Skips the current iteration and continues with the |\n|\t\t next iteration \t\t\t|\n";
+			cout << "| C) Exits the entire program \t\t\t\t|\n";
+			cout << "| D) Executes the code block repeatedly \t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 5:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 6:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"cin\" object in C++?\t| \n";
+			cout << "|\t A) Print data to the console \t\t\t|\n";
+			cout << "|\t B) Read data from a file \t\t\t|\n";
+			cout << "|\t C) Input data from the user \t\t\t|\n";
+			cout << "|\t D) Perform arithmetic operations \t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 7:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which operator in C++ is used to access the value\t|\n|\t stored at a memory address?\t\t\t| \n";
+			cout << "|\t\t\t A) * \t\t\t\t|\n";
+			cout << "|\t\t\t B) & \t\t\t\t|\n";
+			cout << "|\t\t\t C) -> \t\t\t\t|\n";
+			cout << "|\t\t\t D) $ \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'c' or option == 'C')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 8:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"++\" operator in C++?\t| \n";
+			cout << "|\t A) Decrement a value by 1 \t\t\t|\n";
+			cout << "|\t B) Add 1 to a value \t\t\t\t|\n";
+			cout << "|\t C) Multiply a value by 2 \t\t\t|\n";
+			cout << "|\t D) Divide a value by 2 \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 9:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which C++ keyword is used to declare a constant?\t| \n";
+			cout << "|\t\t A) var \t\t\t\t|\n";
+			cout << "|\t\t B) const \t\t\t\t|\n";
+			cout << "|\t\t C) constant \t\t\t\t|\n";
+			cout << "|\t\t D) static \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 10:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What does the \"else\" statement represent in an\t|\n|\t\t if-else construct in C++?\t\t| \n";
+			cout << "|\t A) It indicates the end of the if block \t|\n";
+			cout << "|\t B) It specifies the condition for the if block |\n";
+			cout << "|\t C) It contains the code to be executed if\t|\n|\t\t the condition is false \t\t|\n";
+			cout << "|\t D) It defines the variable to be used in \t|\n|\t\t the if block \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 11:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"sizeof\" operator in C++?\t| \n";
+			cout << "|\t A) Returns the size of a variable in bytes \t|\n";
+			cout << "|\t B) Performs addition on two variables \t\t|\n";
+			cout << "|\t C) Checks if two variables are of the same type|\n";
+			cout << "|\t D) Converts variables to a specific size \t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 12:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which type of control structure allows a program\t|\n|\t\t to choose between two or more paths?\t| \n";
+			cout << "|\t\t\t A) Sequence \t\t\t|\n";
+			cout << "|\t\t\t B) Iteration \t\t\t|\n";
+			cout << "|\t\t\t C) Selection \t\t\t|\n";
+			cout << "|\t\t\t D) Looping \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 13:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What does the \" || \" operator represent in C++? \t| \n";
+			cout << "|\t\t A) Logical OR \t\t\t\t|\n";
+			cout << "|\t\t B) Bitwise OR \t\t\t\t|\n";
+			cout << "|\t\t C) Assignment \t\t\t\t|\n";
+			cout << "|\t\t D) Exclusive OR \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 14:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| what is the function of the \"switch\" statement? \t| \n";
+			cout << "|\t A) To execute a block of code repeatedly \t|\n";
+			cout << "|\t B) To compare multiple conditions and execute\t|\n|\t\t the appropriate block of code \t\t|\n";
+			cout << "|\t C) To terminate the program \t\t\t|\n";
+			cout << "|\t D) To declare variables \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 15:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which data type in C++ is used to store characters? \t| \n";
+			cout << "|\t\t A) char \t\t\t\t|\n";
+			cout << "|\t\t B) string \t\t\t\t|\n";
+			cout << "|\t\t C) float \t\t\t\t|\n";
+			cout << "|\t\t D) double \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 16:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"continue\" statement\t|\n|\t\t in a loop in C++?\t\t\t| \n";
+			cout << "|\t A) Terminate the loop \t\t\t\t|\n";
+			cout << "|\t B) Skip the remaining code in the loop\t\t|\n|\t\t and move to the next iteration \t|\n";
+			cout << "|\t C) Exit the entire program \t\t\t|\n";
+			cout << "|\t D) Restart the loop from the beginning \t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 17:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the syntax for a single-line comment in C++?\t| \n";
+			cout << "|\t\t A) // comment \t\t\t\t|\n";
+			cout << "|\t\t B) /* comment */ \t\t\t|\n";
+			cout << "|\t\t C) # comment # \t\t\t|\n";
+			cout << "|\t\t D) ' comment ' \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 18:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"cin.ignore()\" function?\t| \n";
+			cout << "|\t A) Ignore any input given by the user \t\t|\n";
+			cout << "|\t B) Ignore a specific character from the\t|\n|\t\t input buffer \t\t\t\t|\n";
+			cout << "|\t C) Ignore all errors in the input stream \t|\n";
+			cout << "|\t D) Ignore whitespace characters in the\t\t|\n|\t\t input stream \t\t\t\t|\n\t\tanswer: ";
+			cin >> option;
+
+			if (option == 'D' or option == 'd')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is D \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 19:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the function of the \"do - while\" loop in C++?\t| \n";
+			cout << "|\t A) Execute the code block based on a condition |\n";
+			cout << "|\t B) Execute the code block at least once\t|\n|\t\t before checking the condition \t\t|\n";
+			cout << "|\t C) Execute the code block for a specific\t|\n|\t\t number of times \t\t\t|\n";
+			cout << "|\t D) Execute the code block if the condition\t|\n|\t\t is true \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 20:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which operator in C++ is used to compare two values\t|\n|\t\t and check for equality?\t\t| \n";
+			cout << "|\t\t\t A) = \t\t\t\t|\n";
+			cout << "|\t\t\t B) == \t\t\t\t|\n";
+			cout << "|\t\t\t C) != \t\t\t\t|\n";
+			cout << "|\t\t\t D) <= \t\t\t\t|\n\t\tAnswer: ";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 21:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"endl\" manipulator? \t| \n";
+			cout << "|  A) Move to the next line and flush the output buffer |\n";
+			cout << "|\t B) Print the end of a line character \t\t|\n";
+			cout << "|\t C) Terminate the program \t\t\t|\n";
+			cout << "|\t D) Clear the console screen \t\t\t|\n\t\t Answer: ";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 22:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which keyword is used to exit a loop prematurely?\t| \n";
+			cout << "|\t\t A) end \t\t\t\t|\n";
+			cout << "|\t\t B) stop \t\t\t\t|\n";
+			cout << "|\t\t C) break \t\t\t\t|\n";
+			cout << "|\t\t D) terminate \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 23:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the role of the \"default\" case in\t\t|\n|\t\t \"switch\" statement in C++?\t\t| \n";
+			cout << "|\t A) It defines the default value for a variable |\n";
+			cout << "|\t B) It executes when none of the other case\t|\n|\t\t values match the switch expression \t|\n";
+			cout << "|\t C) It indicates the end of switch statement\t|\n";
+			cout << "|\t D) It terminates the program \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 24:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which operator is used to perform pointer arithmetic? | \n";
+			cout << "|\t\t\t A) + \t\t\t\t|\n";
+			cout << "|\t\t\t B) / \t\t\t\t|\n";
+			cout << "|\t\t\t C) * \t\t\t\t|\n";
+			cout << "|\t\t\t D) $ \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 25:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 26:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 27:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			break;
+
+		case 28:
+			cout << "|\t\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 29:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 30:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 31:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 32:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 33:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 34:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 35:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 36:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 37:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 38:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 39:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 40:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		default:
+			cout << "inavalid option\t";
+			goto hre;
+		}
+	}
+
+	cout << "|\t\tyou scored " << score << " out of 10.\t\t\t|\n";
+	style();
+	sleep_for(seconds(1));
 }
 
 void quiz::PF()
@@ -480,975 +1460,983 @@ void quiz::PF()
 	int counter = 1;
 	char option;
 
-	srand(time(0));
-	int min = 1, max = 40;
-	int op = rand() % (max - min + 1);
-
-	op = 23;
-	switch (op)
+	for (int i = 0; i < 10; i++)
 	{
-	case 1:
-		cout << "|\t Question no. " << counter << "\t\t\t\t\t|\n";
-		cout << "| What is the purpose of the \"cout\" object in C++ ? \t| \n";
-		cout << "|\t A) Input data from the user\t\t\t|\n";
-		cout << "|\t B) Print data to the console\t\t\t|\n";
-		cout << "|\t C) Read data from a file\t\t\t|\n";
-		cout << "|\t D) Perform arithmetic operations\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'b' or option == 'B')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 2:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which data type in C++ is use to store integer value? | \n";
-		cout << "|\t\t A) int \t\t\t\t|\n";
-		cout << "|\t\t B) float \t\t\t\t|\n";
-		cout << "|\t\t C) char \t\t\t\t|\n";
-		cout << "|\t\t D) double \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 3:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which loop structure in C++ executes the code block\t|\n|\t at least once before checking the condition? \t| \n";
-		cout << "|\t A) for loop \t\t\t\t\t|\n";
-		cout << "|\t B) while loop \t\t\t\t\t|\n";
-		cout << "|\t C) do-while loop \t\t\t\t|\n";
-		cout << "|\t D) if-else loop \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'c' or option == 'C')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is C \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 4:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What does the \"break\" statement do in a loop in C++?\t| \n";
-		cout << "| A) Terminates the loop and transfers control to\t|\n|\t\t the next iteration \t\t\t|\n";
-		cout << "| B) Skips the current iteration and continues with the |\n|\t\t next iteration \t\t\t|\n";
-		cout << "| C) Exits the entire program \t\t\t\t|\n";
-		cout << "| D) Executes the code block repeatedly \t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 5:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 6:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the purpose of the \"cin\" object in C++?\t| \n";
-		cout << "|\t A) Print data to the console \t\t\t|\n";
-		cout << "|\t B) Read data from a file \t\t\t|\n";
-		cout << "|\t C) Input data from the user \t\t\t|\n";
-		cout << "|\t D) Perform arithmetic operations \t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'C' or option == 'c')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is C \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 7:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which operator in C++ is used to access the value\t|\n|\t stored at a memory address?\t\t\t| \n";
-		cout << "|\t\t\t A) * \t\t\t\t|\n";
-		cout << "|\t\t\t B) & \t\t\t\t|\n";
-		cout << "|\t\t\t C) -> \t\t\t\t|\n";
-		cout << "|\t\t\t D) $ \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'c' or option == 'C')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is C \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 8:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the purpose of the \"++\" operator in C++?\t| \n";
-		cout << "|\t A) Decrement a value by 1 \t\t\t|\n";
-		cout << "|\t B) Add 1 to a value \t\t\t\t|\n";
-		cout << "|\t C) Multiply a value by 2 \t\t\t|\n";
-		cout << "|\t D) Divide a value by 2 \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 9:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which C++ keyword is used to declare a constant?\t| \n";
-		cout << "|\t\t A) var \t\t\t\t|\n";
-		cout << "|\t\t B) const \t\t\t\t|\n";
-		cout << "|\t\t C) constant \t\t\t\t|\n";
-		cout << "|\t\t D) static \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 10:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What does the \"else\" statement represent in an\t|\n|\t\t if-else construct in C++?\t\t| \n";
-		cout << "|\t A) It indicates the end of the if block \t|\n";
-		cout << "|\t B) It specifies the condition for the if block |\n";
-		cout << "|\t C) It contains the code to be executed if\t|\n|\t\t the condition is false \t\t|\n";
-		cout << "|\t D) It defines the variable to be used in \t|\n|\t\t the if block \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'C' or option == 'c')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is C \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 11:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the purpose of the \"sizeof\" operator in C++?\t| \n";
-		cout << "|\t A) Returns the size of a variable in bytes \t|\n";
-		cout << "|\t B) Performs addition on two variables \t\t|\n";
-		cout << "|\t C) Checks if two variables are of the same type|\n";
-		cout << "|\t D) Converts variables to a specific size \t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 12:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which type of control structure allows a program\t|\n|\t\t to choose between two or more paths?\t| \n";
-		cout << "|\t\t\t A) Sequence \t\t\t|\n";
-		cout << "|\t\t\t B) Iteration \t\t\t|\n";
-		cout << "|\t\t\t C) Selection \t\t\t|\n";
-		cout << "|\t\t\t D) Looping \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'C' or option == 'c')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is C \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 13:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What does the \" || \" operator represent in C++? \t| \n";
-		cout << "|\t\t A) Logical OR \t\t\t\t|\n";
-		cout << "|\t\t B) Bitwise OR \t\t\t\t|\n";
-		cout << "|\t\t C) Assignment \t\t\t\t|\n";
-		cout << "|\t\t D) Exclusive OR \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 14:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| what is the function of the \"switch\" statement? \t| \n";
-		cout << "|\t A) To execute a block of code repeatedly \t|\n";
-		cout << "|\t B) To compare multiple conditions and execute\t|\n|\t\t the appropriate block of code \t\t|\n";
-		cout << "|\t C) To terminate the program \t\t\t|\n";
-		cout << "|\t D) To declare variables \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 15:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which data type in C++ is used to store characters? \t| \n";
-		cout << "|\t\t A) char \t\t\t\t|\n";
-		cout << "|\t\t B) string \t\t\t\t|\n";
-		cout << "|\t\t C) float \t\t\t\t|\n";
-		cout << "|\t\t D) double \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 16:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the purpose of the \"continue\" statement\t|\n|\t\t in a loop in C++?\t\t\t| \n";
-		cout << "|\t A) Terminate the loop \t\t\t\t|\n";
-		cout << "|\t B) Skip the remaining code in the loop\t\t|\n|\t\t and move to the next iteration \t|\n";
-		cout << "|\t C) Exit the entire program \t\t\t|\n";
-		cout << "|\t D) Restart the loop from the beginning \t|\n\t\t";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 17:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the syntax for a single-line comment in C++?\t| \n";
-		cout << "|\t\t A) // comment \t\t\t\t|\n";
-		cout << "|\t\t B) /* comment */ \t\t\t|\n";
-		cout << "|\t\t C) # comment # \t\t\t|\n";
-		cout << "|\t\t D) ' comment ' \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 18:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the purpose of the \"cin.ignore()\" function?\t| \n";
-		cout << "|\t A) Ignore any input given by the user \t\t|\n";
-		cout << "|\t B) Ignore a specific character from the\t|\n|\t\t input buffer \t\t\t\t|\n";
-		cout << "|\t C) Ignore all errors in the input stream \t|\n";
-		cout << "|\t D) Ignore whitespace characters in the\t\t|\n|\t\t input stream \t\t\t\t|\n\t\tanswer: ";
-		cin >> option;
-
-		if (option == 'D' or option == 'd')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is D \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 19:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the function of the \"do - while\" loop in C++?\t| \n";
-		cout << "|\t A) Execute the code block based on a condition |\n";
-		cout << "|\t B) Execute the code block at least once\t|\n|\t\t before checking the condition \t\t|\n";
-		cout << "|\t C) Execute the code block for a specific\t|\n|\t\t number of times \t\t\t|\n";
-		cout << "|\t D) Execute the code block if the condition\t|\n|\t\t is true \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 20:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which operator in C++ is used to compare two values\t|\n|\t\t and check for equality?\t\t| \n";
-		cout << "|\t\t\t A) = \t\t\t\t|\n";
-		cout << "|\t\t\t B) == \t\t\t\t|\n";
-		cout << "|\t\t\t C) != \t\t\t\t|\n";
-		cout << "|\t\t\t D) <= \t\t\t\t|\n\t\tAnswer: ";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 21:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the purpose of the \"endl\" manipulator? \t| \n";
-		cout << "|  A) Move to the next line and flush the output buffer |\n";
-		cout << "|\t B) Print the end of a line character \t\t|\n";
-		cout << "|\t C) Terminate the program \t\t\t|\n";
-		cout << "|\t D) Clear the console screen \t\t\t|\n\t\t Answer: ";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 22:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| Which keyword is used to exit a loop prematurely?\t| \n";
-		cout << "|\t\t A) end \t\t\t\t|\n";
-		cout << "|\t\t B) stop \t\t\t\t|\n";
-		cout << "|\t\t C) break \t\t\t\t|\n";
-		cout << "|\t\t D) terminate \t\t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'C' or option == 'c')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is C \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 23:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the role of the \"default\" case in\t\t|\n|\t\t \"switch\" statement in C++?\t\t| \n";
-		cout << "|\t A) It defines the default value for a variable |\n";
-		cout << "|\t B) It executes when none of the other case\t|\n|\t\t values match the switch expression \t|\n";
-		cout << "|\t C) It indicates the end of switch statement\t|\n";
-		cout << "|\t D) It terminates the program \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'B' or option == 'b')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is B \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 24:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 25:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 26:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 27:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		break;
-
-	case 28:
-		cout << "|\t\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 29:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 30:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 31:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 32:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 33:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 34:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 35:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 36:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 37:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 38:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 39:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
-		}
-		style();
-		break;
-
-	case 40:
-		cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-		cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-		cout << "|\t\t A) % \t\t\t|\n";
-		cout << "|\t\t B) / \t\t\t|\n";
-		cout << "|\t\t C) * \t\t\t|\n";
-		cout << "|\t\t D) $ \t\t\t|\n\t\t";
-		cin >> option;
-
-		if (option == 'A' or option == 'a')
-		{
-			counter++;
-			cout << "|\tCongratulations!! your answer is correct\t|\n";
-			score++;
-			cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-		}
-		else
-		{
-			cout << "|\tWrong choice !!! right option is A \t\t|\n";
-			counter++;
+		hre:
+		srand(time(0));
+		int min = 1, max = 40;
+		int op = rand() % (max - min + 1);
+
+		switch (op)
+		{
+		case 1:
+			cout << "|\t Question no. " << counter << "\t\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"cout\" object in C++ ? \t| \n";
+			cout << "|\t A) Input data from the user\t\t\t|\n";
+			cout << "|\t B) Print data to the console\t\t\t|\n";
+			cout << "|\t C) Read data from a file\t\t\t|\n";
+			cout << "|\t D) Perform arithmetic operations\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'b' or option == 'B')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 2:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which data type in C++ is use to store integer value? | \n";
+			cout << "|\t\t A) int \t\t\t\t|\n";
+			cout << "|\t\t B) float \t\t\t\t|\n";
+			cout << "|\t\t C) char \t\t\t\t|\n";
+			cout << "|\t\t D) double \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 3:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which loop structure in C++ executes the code block\t|\n|\t at least once before checking the condition? \t| \n";
+			cout << "|\t A) for loop \t\t\t\t\t|\n";
+			cout << "|\t B) while loop \t\t\t\t\t|\n";
+			cout << "|\t C) do-while loop \t\t\t\t|\n";
+			cout << "|\t D) if-else loop \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'c' or option == 'C')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 4:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What does the \"break\" statement do in a loop in C++?\t| \n";
+			cout << "| A) Terminates the loop and transfers control to\t|\n|\t\t the next iteration \t\t\t|\n";
+			cout << "| B) Skips the current iteration and continues with the |\n|\t\t next iteration \t\t\t|\n";
+			cout << "| C) Exits the entire program \t\t\t\t|\n";
+			cout << "| D) Executes the code block repeatedly \t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 5:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 6:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"cin\" object in C++?\t| \n";
+			cout << "|\t A) Print data to the console \t\t\t|\n";
+			cout << "|\t B) Read data from a file \t\t\t|\n";
+			cout << "|\t C) Input data from the user \t\t\t|\n";
+			cout << "|\t D) Perform arithmetic operations \t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 7:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which operator in C++ is used to access the value\t|\n|\t stored at a memory address?\t\t\t| \n";
+			cout << "|\t\t\t A) * \t\t\t\t|\n";
+			cout << "|\t\t\t B) & \t\t\t\t|\n";
+			cout << "|\t\t\t C) -> \t\t\t\t|\n";
+			cout << "|\t\t\t D) $ \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'c' or option == 'C')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 8:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"++\" operator in C++?\t| \n";
+			cout << "|\t A) Decrement a value by 1 \t\t\t|\n";
+			cout << "|\t B) Add 1 to a value \t\t\t\t|\n";
+			cout << "|\t C) Multiply a value by 2 \t\t\t|\n";
+			cout << "|\t D) Divide a value by 2 \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 9:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which C++ keyword is used to declare a constant?\t| \n";
+			cout << "|\t\t A) var \t\t\t\t|\n";
+			cout << "|\t\t B) const \t\t\t\t|\n";
+			cout << "|\t\t C) constant \t\t\t\t|\n";
+			cout << "|\t\t D) static \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 10:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What does the \"else\" statement represent in an\t|\n|\t\t if-else construct in C++?\t\t| \n";
+			cout << "|\t A) It indicates the end of the if block \t|\n";
+			cout << "|\t B) It specifies the condition for the if block |\n";
+			cout << "|\t C) It contains the code to be executed if\t|\n|\t\t the condition is false \t\t|\n";
+			cout << "|\t D) It defines the variable to be used in \t|\n|\t\t the if block \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 11:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"sizeof\" operator in C++?\t| \n";
+			cout << "|\t A) Returns the size of a variable in bytes \t|\n";
+			cout << "|\t B) Performs addition on two variables \t\t|\n";
+			cout << "|\t C) Checks if two variables are of the same type|\n";
+			cout << "|\t D) Converts variables to a specific size \t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 12:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which type of control structure allows a program\t|\n|\t\t to choose between two or more paths?\t| \n";
+			cout << "|\t\t\t A) Sequence \t\t\t|\n";
+			cout << "|\t\t\t B) Iteration \t\t\t|\n";
+			cout << "|\t\t\t C) Selection \t\t\t|\n";
+			cout << "|\t\t\t D) Looping \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 13:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What does the \" || \" operator represent in C++? \t| \n";
+			cout << "|\t\t A) Logical OR \t\t\t\t|\n";
+			cout << "|\t\t B) Bitwise OR \t\t\t\t|\n";
+			cout << "|\t\t C) Assignment \t\t\t\t|\n";
+			cout << "|\t\t D) Exclusive OR \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 14:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| what is the function of the \"switch\" statement? \t| \n";
+			cout << "|\t A) To execute a block of code repeatedly \t|\n";
+			cout << "|\t B) To compare multiple conditions and execute\t|\n|\t\t the appropriate block of code \t\t|\n";
+			cout << "|\t C) To terminate the program \t\t\t|\n";
+			cout << "|\t D) To declare variables \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 15:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which data type in C++ is used to store characters? \t| \n";
+			cout << "|\t\t A) char \t\t\t\t|\n";
+			cout << "|\t\t B) string \t\t\t\t|\n";
+			cout << "|\t\t C) float \t\t\t\t|\n";
+			cout << "|\t\t D) double \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 16:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"continue\" statement\t|\n|\t\t in a loop in C++?\t\t\t| \n";
+			cout << "|\t A) Terminate the loop \t\t\t\t|\n";
+			cout << "|\t B) Skip the remaining code in the loop\t\t|\n|\t\t and move to the next iteration \t|\n";
+			cout << "|\t C) Exit the entire program \t\t\t|\n";
+			cout << "|\t D) Restart the loop from the beginning \t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 17:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the syntax for a single-line comment in C++?\t| \n";
+			cout << "|\t\t A) // comment \t\t\t\t|\n";
+			cout << "|\t\t B) /* comment */ \t\t\t|\n";
+			cout << "|\t\t C) # comment # \t\t\t|\n";
+			cout << "|\t\t D) ' comment ' \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 18:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"cin.ignore()\" function?\t| \n";
+			cout << "|\t A) Ignore any input given by the user \t\t|\n";
+			cout << "|\t B) Ignore a specific character from the\t|\n|\t\t input buffer \t\t\t\t|\n";
+			cout << "|\t C) Ignore all errors in the input stream \t|\n";
+			cout << "|\t D) Ignore whitespace characters in the\t\t|\n|\t\t input stream \t\t\t\t|\n\t\tanswer: ";
+			cin >> option;
+
+			if (option == 'D' or option == 'd')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is D \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 19:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the function of the \"do - while\" loop in C++?\t| \n";
+			cout << "|\t A) Execute the code block based on a condition |\n";
+			cout << "|\t B) Execute the code block at least once\t|\n|\t\t before checking the condition \t\t|\n";
+			cout << "|\t C) Execute the code block for a specific\t|\n|\t\t number of times \t\t\t|\n";
+			cout << "|\t D) Execute the code block if the condition\t|\n|\t\t is true \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 20:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which operator in C++ is used to compare two values\t|\n|\t\t and check for equality?\t\t| \n";
+			cout << "|\t\t\t A) = \t\t\t\t|\n";
+			cout << "|\t\t\t B) == \t\t\t\t|\n";
+			cout << "|\t\t\t C) != \t\t\t\t|\n";
+			cout << "|\t\t\t D) <= \t\t\t\t|\n\t\tAnswer: ";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 21:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the purpose of the \"endl\" manipulator? \t| \n";
+			cout << "|  A) Move to the next line and flush the output buffer |\n";
+			cout << "|\t B) Print the end of a line character \t\t|\n";
+			cout << "|\t C) Terminate the program \t\t\t|\n";
+			cout << "|\t D) Clear the console screen \t\t\t|\n\t\t Answer: ";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 22:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which keyword is used to exit a loop prematurely?\t| \n";
+			cout << "|\t\t A) end \t\t\t\t|\n";
+			cout << "|\t\t B) stop \t\t\t\t|\n";
+			cout << "|\t\t C) break \t\t\t\t|\n";
+			cout << "|\t\t D) terminate \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is C \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 23:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the role of the \"default\" case in\t\t|\n|\t\t \"switch\" statement in C++?\t\t| \n";
+			cout << "|\t A) It defines the default value for a variable |\n";
+			cout << "|\t B) It executes when none of the other case\t|\n|\t\t values match the switch expression \t|\n";
+			cout << "|\t C) It indicates the end of switch statement\t|\n";
+			cout << "|\t D) It terminates the program \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'B' or option == 'b')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is B \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 24:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| Which operator is used to perform pointer arithmetic? | \n";
+			cout << "|\t\t\t A) + \t\t\t\t|\n";
+			cout << "|\t\t\t B) / \t\t\t\t|\n";
+			cout << "|\t\t\t C) * \t\t\t\t|\n";
+			cout << "|\t\t\t D) $ \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 25:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 26:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 27:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			break;
+
+		case 28:
+			cout << "|\t\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 29:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 30:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 31:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 32:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 33:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 34:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 35:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 36:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 37:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 38:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 39:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		case 40:
+			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'A' or option == 'a')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
+		default:
+			cout << "inavalid option\t";
+			goto hre;
 		}
-		style();
-		break;
-
-	default:
-		cout << "inavalid option\n";
 	}
+
+	cout << "|\t\tyou scored " << score << " out of 10.\t\t\t|\n";
+	style();
+	sleep_for(seconds(1));
 }
 
 leaderboard::leaderboard()
