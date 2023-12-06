@@ -2443,6 +2443,7 @@ void quiz::PF()
 		int min = 1, max = 40;
 		int op = rand() % (max - min + 1);
 
+		op = 30;
 		switch (op)
 		{
 		case 1:
@@ -2999,14 +3000,14 @@ void quiz::PF()
 
 		case 24:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| Which operator is used to perform pointer arithmetic? | \n";
-			cout << "|\t\t\t A) + \t\t\t\t|\n";
-			cout << "|\t\t\t B) / \t\t\t\t|\n";
-			cout << "|\t\t\t C) * \t\t\t\t|\n";
-			cout << "|\t\t\t D) $ \t\t\t\t|\n\t\t";
+			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
+			cout << "|\t\t A) % \t\t\t|\n";
+			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "|\t\t C) * \t\t\t|\n";
+			cout << "|\t\t D) $ \t\t\t|\n\t\t";
 			cin >> option;
 
-			if (option == 'C' or option == 'c')
+			if (option == 'A' or option == 'a')
 			{
 				counter++;
 				cout << "|\tCongratulations!! your answer is correct\t|\n";
@@ -3023,11 +3024,11 @@ void quiz::PF()
 
 		case 25:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| Which operator in C++ is used to access the value stored in a pointer variable? \t| \n";
+			cout << "|\t\t A) * \t\t\t|\n";
+			cout << "|\t\t B) & \t\t\t|\n";
+			cout << "|\t\t C) -> \t\t\t|\n";
+			cout << "|\t\t D) :: \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3047,14 +3048,14 @@ void quiz::PF()
 
 		case 26:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What does the \"++variable\" notation mean in C++? \t| \n";
+			cout << "|A) Increment the variable after using its current value|\n";
+			cout << "|B) Increment the variable before using it current value|\n";
+			cout << "|C) Decrement the variable after using its current value|\n";
+			cout << "|D) Decrement the variable before using it current value|\n\t\t";
 			cin >> option;
 
-			if (option == 'A' or option == 'a')
+			if (option == 'B' or option == 'b')
 			{
 				counter++;
 				cout << "|\tCongratulations!! your answer is correct\t|\n";
@@ -3071,34 +3072,11 @@ void quiz::PF()
 
 		case 27:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
-			cin >> option;
-
-			if (option == 'A' or option == 'a')
-			{
-				counter++;
-				cout << "|\tCongratulations!! your answer is correct\t|\n";
-				score++;
-				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
-			}
-			else
-			{
-				cout << "|\tWrong choice !!! right option is A \t\t|\n";
-				counter++;
-			}
-			break;
-
-		case 28:
-			cout << "|\t\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What is the purpose of the \"endl\" manipulator in C++? | \n";
+			cout << "|\t A) Move to the next line and flush the output\t|\n|\t\t\t buffer \t\t\t|\n";
+			cout << "|\t B) Print the end of a line character \t\t|\n";
+			cout << "|\t C) Terminate the program \t\t\t|\n";
+			cout << "|\t D) Clear the console screen \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3116,13 +3094,37 @@ void quiz::PF()
 			style();
 			break;
 
+		case 28:
+			cout << "|\t\t\t Question no. " << counter << "\t\t\t|\n";
+			cout << "| Which operator in C++ is used to compare two values\t|\n|\t and check for inequality? \t\t\t| \n";
+			cout << "|\t\t\t A) = \t\t\t\t|\n";
+			cout << "|\t\t\t B) == \t\t\t\t|\n";
+			cout << "|\t\t\t C) != \t\t\t\t|\n";
+			cout << "|\t\t\t D) =! \t\t\t\t|\n\t\t";
+			cin >> option;
+
+			if (option == 'C' or option == 'c')
+			{
+				counter++;
+				cout << "|\tCongratulations!! your answer is correct\t|\n";
+				score++;
+				cout << "|\t\tyour points are updated to " << score << "\t\t|\n";
+			}
+			else
+			{
+				cout << "|\tWrong choice !!! right option is A \t\t|\n";
+				counter++;
+			}
+			style();
+			break;
+
 		case 29:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What is the role of the default case in a switch\t|\n|\t\t statement in C++? \t\t\t| \n";
+			cout << "|\t A) It defines the default value for a variable |\n";
+			cout << "|\t B) It executes when none of the other case\t|\n|\t  values match the switch expression \t\t|\n";
+			cout << "|\t C) It indicate the end of the switch statement |\n";
+			cout << "|\t D) It terminates the program \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3142,11 +3144,11 @@ void quiz::PF()
 
 		case 30:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| Which operator in C++ is used to access the value stored in a pointer variable? \t| \n";
+			cout << "|\t\t A) * \t\t\t|\n";
+			cout << "|\t\t B) & \t\t\t|\n";
+			cout << "|\t\t C) -> \t\t\t|\n";
+			cout << "|\t\t D) :: \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3166,11 +3168,11 @@ void quiz::PF()
 
 		case 31:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What does the ++variable notation mean in C++? \t| \n";
+			cout << "|\t\t A) Increment the variable after using its current value \t\t\t|\n";
+			cout << "|\t\t B) Increment the variable before using its current value \t\t\t|\n";
+			cout << "|\t\t C) Decrement the variable after using its current value \t\t\t|\n";
+			cout << "|\t\t D) Decrement the variable before using its current value \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3190,11 +3192,11 @@ void quiz::PF()
 
 		case 32:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What is the purpose of the continue statement in C++? \t| \n";
+			cout << "|\t\t A) Skip the remaining code in the loop and move to the next iteration \t\t\t|\n";
+			cout << "|\t\t B) Terminate the loop \t\t\t|\n";
+			cout << "|\t\t C) Exit the entire program \t\t\t|\n";
+			cout << "|\t\t D) Restart the loop from the beginning \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3214,11 +3216,11 @@ void quiz::PF()
 
 		case 33:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| Which header file is used in C++ for input/output operations? \t| \n";
+			cout << "|\t\t A) <math.h> \t\t\t|\n";
+			cout << "|\t\t B) <stdio.h> \t\t\t|\n";
+			cout << "|\t\t C) <iostream> \t\t\t|\n";
+			cout << "|\t\t D) <stdlib.h> \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3238,11 +3240,11 @@ void quiz::PF()
 
 		case 34:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What does the && operator represent in C++? \t| \n";
+			cout << "|\t\t A) Logical AND \t\t\t|\n";
+			cout << "|\t\t B) Bitwise AND \t\t\t|\n";
+			cout << "|\t\t C) Assignment \t\t\t|\n";
+			cout << "|\t\t D) Exclusive OR \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3262,11 +3264,11 @@ void quiz::PF()
 
 		case 35:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| Which control structure in C++ is used to execute a block of code repeatedly as long as the condition is true? \t| \n";
+			cout << "|\t\t A) for loop \t\t\t|\n";
+			cout << "|\t\t B) while loop \t\t\t|\n";
+			cout << "|\t\t C) do-while loop \t\t\t|\n";
+			cout << "|\t\t D) switch statement \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3286,11 +3288,11 @@ void quiz::PF()
 
 		case 36:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What is the function of the break statement in a loop in C++? \t| \n";
+			cout << "|\t\t A) Terminate the loop and transfer control to the next iteration \t\t\t|\n";
+			cout << "|\t\t B) Skip the current iteration and continue with the next iteration \t\t\t|\n";
+			cout << "|\t\t C) Exit the entire program \t\t\t|\n";
+			cout << "|\t\t D) Execute the code block repeatedly \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3310,11 +3312,11 @@ void quiz::PF()
 
 		case 37:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
+			cout << "| Which operator in C++ is used to perform pointer arithmetic? \t| \n";
+			cout << "|\t\t A) + \t\t\t|\n";
+			cout << "|\t\t B) - \t\t\t|\n";
 			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "|\t\t D) / \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3334,11 +3336,11 @@ void quiz::PF()
 
 		case 38:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What is the purpose of the sizeof operator in C++? \t| \n";
+			cout << "|\t\t A) Returns the size of a variable in bytes \t\t\t|\n";
+			cout << "|\t\t B) Performs addition on two variables \t\t\t|\n";
+			cout << "|\t\t C) Checks if two variables are of the same type \t\t\t|\n";
+			cout << "|\t\t D) Checks if two variables are of the same type \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3358,11 +3360,11 @@ void quiz::PF()
 
 		case 39:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| What is the syntax for a single-line comment in C++? \t| \n";
+			cout << "|\t\t A) // comment \t\t\t|\n";
+			cout << "|\t\t B) /* comment */ \t\t\t|\n";
+			cout << "|\t\t C) # comment # \t\t\t|\n";
+			cout << "|\t\t D) ' comment ' \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3382,11 +3384,11 @@ void quiz::PF()
 
 		case 40:
 			cout << "|\t\t Question no. " << counter << "\t\t\t\t|\n";
-			cout << "| What is the operator used for the modulus operation in C++? \t| \n";
-			cout << "|\t\t A) % \t\t\t|\n";
-			cout << "|\t\t B) / \t\t\t|\n";
-			cout << "|\t\t C) * \t\t\t|\n";
-			cout << "|\t\t D) $ \t\t\t|\n\t\t";
+			cout << "| Which keyword in C++ is used to declare a constant? \t| \n";
+			cout << "|\t\t A) var \t\t\t|\n";
+			cout << "|\t\t B) const \t\t\t|\n";
+			cout << "|\t\t C) constant \t\t\t|\n";
+			cout << "|\t\t D) define \t\t\t|\n\t\t";
 			cin >> option;
 
 			if (option == 'A' or option == 'a')
@@ -3405,8 +3407,7 @@ void quiz::PF()
 			break;
 
 		default:
-			cout << "inavalid option\t";
-			goto hre;
+			cout << "inavalid option\n";
 		}
 	}
 
